@@ -888,7 +888,8 @@ address {
     flex-direction: row;
     gap: unset;
     align-items: flex-start;
-    text-align: start;
+    width: 100%;
+    flex-wrap: unset;
   }
 }
 
@@ -926,8 +927,8 @@ address {
 }
 
 @media only screen and (min-width: 1158px) {
-  .page-footer .social-media-list {
-    justify-content: flex-start;
+  .page-footer .social-media-container {
+    margin-right: 80px;
   }
 }
 
