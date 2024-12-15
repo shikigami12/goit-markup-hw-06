@@ -521,7 +521,6 @@ address {
 }
 
 .strength-item-icon {
-  display: flex;
   width: auto;
   height: 112px;
   background-color: rgb(var(--cloud));
@@ -532,12 +531,6 @@ address {
   border-radius: 4px;
   margin-bottom: 8px;
   display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .strength-item-icon {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -582,7 +575,6 @@ address {
 @media only screen and (min-width: 768px) {
   .strength-item {
     width: calc(50% - 24px);
-    margin-bottom: 72px;
   }
 }
 
@@ -639,7 +631,7 @@ address {
 }
 .team-list {
   display: flex;
-  gap: 72px 24px;
+  gap: 64px 24px;
   flex-direction: column;
 }
 
@@ -879,10 +871,12 @@ address {
 
 @media only screen and (min-width: 768px) {
   .page-footer .container {
-    flex-direction: column;
+    flex-direction: row;
     gap: 72px;
     align-items: flex-start;
     text-align: start;
+    flex-wrap: wrap;
+    width: 584px;
   }
 }
 
@@ -943,7 +937,7 @@ address {
 @media only screen and (min-width: 768px) {
   .page-footer .social-media-container {
     position: absolute;
-    right: 164px;
+    right: 0;
   }
 }
 
