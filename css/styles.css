@@ -48,8 +48,15 @@ main {
 }
 
 section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media (min-width: 1168px) {
+  section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 h1,
@@ -182,6 +189,10 @@ input {
   z-index: 1;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+address {
+  font-style: normal;
 }
 
 .main-navigation {
@@ -551,7 +562,8 @@ input {
   .strengths-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
+    justify-content: center;
   }
 }
 
@@ -620,7 +632,6 @@ input {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 120px 0;
 }
 
 .team-section-title {
@@ -716,9 +727,6 @@ input {
 /* #endregion */
 
 /* #region Portolio section  */
-.portfolio-section {
-  padding: 120px 0 120px 0;
-}
 
 .portfolio-title {
   margin-bottom: 72px;
@@ -874,7 +882,7 @@ input {
 @media only screen and (min-width: 1158px) {
   .page-footer .container {
     flex-direction: row;
-    gap: 0;
+    gap: unset;
     align-items: flex-start;
     text-align: start;
   }
@@ -882,12 +890,6 @@ input {
 
 .footer-logo-text {
   flex-direction: column;
-}
-
-@media only screen and (min-width: 768px) {
-  .footer-logo-text {
-    margin-right: 120px;
-  }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -1293,9 +1295,11 @@ input[type='checkbox']:checked
 }
 
 .mobile-ham-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   min-height: 100%;
   padding: 16px;
@@ -1311,6 +1315,7 @@ input[type='checkbox']:checked
 }
 
 .mobile-ham-menu-navigation {
+  height: 100%;
 }
 
 .mobile-ham-menu-navigation .navigation-menu {
