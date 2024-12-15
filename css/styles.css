@@ -15,7 +15,7 @@
   --iris: 77, 90, 229;
   --navy-blue: 46, 47, 66;
   --navy-blue-modal: 46, 47, 66, 0.4;
-  --slate: 67, 68, 85;
+  --slate: 67, 68, 85, 1;
   --ocean: 64, 75, 191;
   --gradient-background-color: 46, 47, 66, 0.7;
   --light-slate: 142, 143, 153, 1;
@@ -639,7 +639,7 @@ address {
 }
 .team-list {
   display: flex;
-  gap: 24px;
+  gap: 72px 24px;
   flex-direction: column;
 }
 
@@ -654,6 +654,7 @@ address {
 @media only screen and (min-width: 1158px) {
   .team-list {
     flex-direction: row;
+    gap: 24px;
   }
 }
 
@@ -858,13 +859,19 @@ address {
 }
 .footer-text {
   color: rgb(var(--cloud));
-  width: 264px;
+}
+
+
+
+@media (min-width: 768px) {
+  .footer-text {
+    width: 264px;
+  }
 }
 
 .page-footer .container {
   display: flex;
   text-align: center;
-  align-items: center;
   justify-content: space-between;
   flex-direction: column;
   gap: 72px;
@@ -890,6 +897,12 @@ address {
 
 .footer-logo-text {
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-text .footer-text {
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -975,7 +988,7 @@ address {
 }
 
 .footer-form-input {
-  width: 264px;
+  width: 100%;
   height: 40px;
   border-radius: 4px;
   border: 1px solid white;
@@ -988,8 +1001,14 @@ address {
   letter-spacing: 0.04em;
 }
 
+@media (min-width: 768px) {
+  .footer-form-input {
+    width: 264px;
+  }
+}
+
 .footer-form-btn {
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -1003,6 +1022,7 @@ address {
   border: none;
   transition: var(--custom-transition);
   transition-property: background-color;
+  margin: auto;
 }
 .footer-form-btn:hover,
 .footer-form-btn:focus,
